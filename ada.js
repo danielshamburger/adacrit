@@ -11,7 +11,7 @@ $(document).ready(function(){
 	var menuIsOpen = false;
 
 	$('.menu-toggle').click(function() {
-		$('nav').slideToggle();
+		$('nav').slideToggle("fast");
 		if(!menuIsOpen) {
 			$('.menu-toggle').text("CLOSE");
 			menuIsOpen = true;
