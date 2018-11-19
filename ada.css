@@ -27,6 +27,11 @@ nav li a {
 	color: #fff;
 	display: block;
 	padding: 20px;
+	transition: .15s ease color;
+}
+
+nav li a:hover {
+	color: #114B5F;
 }
 
 .wrapper {
@@ -184,6 +189,7 @@ footer a {
 		color: #fff;
 		padding: 20px 0;
 		font-weight: 800;
+		cursor: pointer;
 	}
 	nav {
 		display: none;
@@ -203,6 +209,10 @@ footer a {
 		width: 100%;
 		display: block;
 		padding: 7px 0px;
+	}
+
+	nav li a:hover {
+		color: #fff;
 	}
 
 	.hero {
