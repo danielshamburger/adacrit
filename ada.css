@@ -1,0 +1,227 @@
+/* ===============================================
+	CSS for Ada Crit Website
+
+	https://github.com/danielshamburger/adacrit/
+	info@adacrit.com
+ =============================================== */
+
+body {
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+header {
+	background: #9DD9D2;
+	text-align: center;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav li a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	padding: 20px;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+h1 {
+	color: #FF6A00;
+	font-weight: 800;
+	font-size: 65px;
+}
+
+h1:nth-child(2) {
+	color: #fff;
+}
+
+h2 {
+	font-weight: 800;
+	font-size: 50px;
+	color: #114B5F;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.hero {
+	text-align: center;
+	background: #9DD9D2;
+	padding: 150px 0;
+}
+
+.hero p {
+	margin: 40px auto;
+	font-size: 20px;
+	display: block;
+}
+
+.button {
+	text-decoration: none;
+	color: #114B5F;
+	border-radius: 10px;
+	font-size: 18px;
+	border: 1px solid #114B5F;
+	padding: 10px 20px;
+	display: inline-block;
+	transition: .15s color ease, .15s background ease;
+	margin: 0 10px;
+}
+
+.button:hover {
+	color: #fff;
+	background: #114B5F;
+}
+
+table {
+	text-align: left;
+	color: #114B5F;
+	font-size: 18px;
+	margin: 50px auto;
+}
+
+th {
+	font-weight: 800;
+	padding: 7px 20px;
+}
+
+td {
+	padding: 7px 20px;
+}
+
+tr {
+	background: #F7F8FA;
+}
+
+tr:nth-child(2n) {
+	background: #fff;
+}
+
+p {
+	color: #114B5F;
+	line-height: 1.7;
+	margin: 0 auto;
+	max-width: 800px
+}
+
+a {
+	color: #114B5F;
+}
+
+img {
+	max-width: 100%;
+}
+
+#schedule {
+	background: #fff;
+	padding: 100px 0;
+}
+
+#schedule p {
+	text-align: center;
+}
+
+#course {
+	background: #F7F8FA;
+	padding: 100px 0;
+}
+
+#location {
+	padding: 100px 0;
+}
+
+#location p {
+	text-align: center;
+}
+
+#register {
+	background: #F7F8FA;
+	padding: 100px 0;
+}
+
+#register p {
+	text-align: center;
+}
+
+#sponsors {
+	padding: 100px 0;
+	text-align: center;
+}
+
+#sponsors p {
+	margin-bottom: 50px;
+}
+
+footer {
+	text-align: center;
+	padding: 10px 0;
+	background: #114B5F;
+	color: #fff;
+	font-size: 15px;
+}
+
+footer p {
+	color: #fff;
+}
+
+footer a {
+	text-decoration: none;
+	color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+	.menu-toggle {
+		display: block;
+		color: #fff;
+		padding: 20px 0;
+		font-weight: 800;
+	}
+	nav {
+		display: none;
+		background: #114B5F;
+		width: 100%;
+		padding: 7px 0;
+	}
+
+	nav li {
+		display: block;
+		width: 100%;
+		font-size: 18px;
+	}
+
+	nav li a {
+		color: #fff;
+		width: 100%;
+		display: block;
+		padding: 7px 0px;
+	}
+
+	.hero {
+		padding: 100px 0;
+	}
+
+	h1 {
+		font-size: 48px;
+	}
+
+	h2 {
+		font-size: 44px;
+	}
+
+	table {
+		font-size: 14px;
+	}
+
+	th, td {
+		padding: 7px 3px;
+	}
+}
