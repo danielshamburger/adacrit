@@ -166,6 +166,25 @@ img {
 	margin-bottom: 50px;
 }
 
+.sponsor-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 70px 0 40px;
+}
+
+.sponsor-list .sponsor {
+	width: calc(25% - 50px);
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+}
+
+.sponsor-list .sponsor.title {
+	width: calc(50% - 50px);
+}
+
 footer {
 	text-align: center;
 	padding: 10px 0;
@@ -181,6 +200,28 @@ footer p {
 footer a {
 	text-decoration: none;
 	color: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+	.sponsor-list .sponsor {
+		width: calc(25% - 40px);
+	}
+}
+
+@media only screen and (max-width: 905px) {
+	.sponsor-list .sponsor {
+		width: calc(25% - 30px);
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.sponsor-list .sponsor {
+		width: calc(50% - 50px);
+		margin-bottom: 60px;
+	}
+	.sponsor-list .sponsor.title {
+		width: calc(100% - 50px);	
+	}
 }
 
 @media only screen and (max-width: 600px) {
