@@ -220,7 +220,7 @@ footer a {
 		margin-bottom: 60px;
 	}
 	.sponsor-list .sponsor.title {
-		width: calc(100% - 50px);	
+		width: 100%;	
 	}
 }
 
