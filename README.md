@@ -1,2 +1,2 @@
-# adacrit
+# Ada Crit
 Ada Criterium Website
