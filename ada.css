@@ -266,7 +266,7 @@ img {
 }
 
 .partner-list .partner {
-	width: calc(25% - 40px);
+	flex: 0 0 calc(25% - 40px);
 	margin-bottom: 50px;
 	display: flex;
 	justify-content: center; 
@@ -300,13 +300,13 @@ footer a {
 
 @media only screen and (max-width: 1200px) {
 	.partner-list .partner {
-		width: calc(25% - 40px);
+		flex: 0 0 calc(25% - 40px);
 	}
 }
 
 @media only screen and (max-width: 905px) {
 	.partner-list .partner {
-		width: calc(25% - 30px);
+		flex: 0 0 calc(25% - 30px);
 	}
 }
 
@@ -401,6 +401,10 @@ footer a {
 
 	#about .wrapper .image {
 		max-width: 250px;
+	}
+
+	.partner-list .partner {
+		flex: 0 0 calc(50% - 25px);
 	}
 
 	h1 {
