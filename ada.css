@@ -375,6 +375,7 @@ footer a {
 
 	.hero {
 		padding: 100px 0 80px;
+		background-size: 200px;
 	}
 
 	#about, #schedule, #course, #register, #volunteer {
