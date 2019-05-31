@@ -1,3 +1,10 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+html { font-family: 'Inter UI', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter UI var alt', sans-serif; }
+}
+
+
 /* ===============================================
 	CSS for Ada Crit Website
 
@@ -5,13 +12,18 @@
 	info@adacrit.com
  =============================================== */
 
-body {
-	font-family: 'Nunito Sans', sans-serif;
-}
 
 header {
-	background: #9DD9D2;
+	background: transparent;
 	text-align: center;
+	position: fixed;
+	width: 100%;
+	transition: .4s ease background;
+	z-index: 99;
+}
+
+header.scrolled {
+	background: #27A3B3;
 }
 
 .menu-toggle {
@@ -24,14 +36,18 @@ nav li {
 
 nav li a {
 	text-decoration: none;
-	color: #fff;
+	color: #27A3B3;
 	display: block;
 	padding: 20px;
 	transition: .15s ease color;
 }
 
+header.scrolled nav li a {
+	color: #fff;
+}
+
 nav li a:hover {
-	color: #114B5F;
+
 }
 
 .wrapper {
@@ -41,27 +57,38 @@ nav li a:hover {
 }
 
 h1 {
-	color: #FF6A00;
+	color: #EB7C23;
 	font-weight: 800;
 	font-size: 65px;
 }
 
 h1:nth-child(2) {
-	color: #fff;
+	color: #27A3B3;
+	font-weight: 300;
+	font-size: 30px;
 }
 
 h2 {
 	font-weight: 800;
 	font-size: 50px;
-	color: #114B5F;
+	color: #27A3B3;
 	text-align: center;
 	margin-bottom: 50px;
 }
 
 .hero {
 	text-align: center;
-	background: #9DD9D2;
-	padding: 150px 0;
+	background-color: #e5e6e8;
+	background-image: url('images/hero-background.png');
+	background-size: 480px;
+	padding: 165px 0 150px 0;
+}
+
+.hero .logo {
+	display: block;
+	width: calc(100% - 80px);
+	max-width: 416px;
+	margin: 0 auto 50px;
 }
 
 .hero p {
@@ -72,50 +99,93 @@ h2 {
 
 .button {
 	text-decoration: none;
-	color: #114B5F;
-	border-radius: 10px;
-	font-size: 18px;
-	border: 1px solid #114B5F;
-	padding: 10px 20px;
+	color: #27A3B3;
+	font-size: 15px;
+	font-weight: 700;
+	border: 2px solid #27A3B3;
+	text-transform: uppercase;
+	padding: 20px;
 	display: inline-block;
 	transition: .15s color ease, .15s background ease;
 	margin: 0 10px;
+	text-align: center;
+	min-width: 150px;
+
+    letter-spacing: .7px;
+    text-align: center;
+    min-width: 150px;
+}
+
+.button.emphasis {
+	color: #EB7C23;
+	background: #EB7C23;
+	color: #fff;
+	border-color: #EB7C23;
 }
 
 .button:hover {
 	color: #fff;
-	background: #114B5F;
+	background: #27A3B3;
+}
+
+.button.emphasis:hover {
+	background: #d6701e;
+	border-color: #d6701e;
+}
+
+#about {
+	padding: 100px 0;
+}
+
+#about .wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#about .wrapper .image {
+	flex: 0 0 320px;
+	margin-right: 80px;
+}
+
+#about .wrapper .copy h2 {
+	text-align: left;
 }
 
 table {
 	text-align: left;
 	color: #114B5F;
 	font-size: 18px;
-	margin: 50px auto;
+	margin: 50px auto 0;
 }
 
 th {
 	font-weight: 800;
-	padding: 7px 20px;
+	padding: 10px 20px;
 }
 
 td {
-	padding: 7px 20px;
+	padding: 10px 20px;
 }
 
 tr {
-	background: #F7F8FA;
+	background: #e8e8e8;
 }
 
 tr:nth-child(2n) {
-	background: #fff;
+	background: transparent;
 }
 
 p {
 	color: #114B5F;
 	line-height: 1.7;
-	margin: 0 auto;
+	font-size: 18px;
+	margin: 0 auto 20px;
 	max-width: 800px
+}
+
+p:last-child {
+	margin-bottom: 0;
 }
 
 a {
@@ -127,7 +197,7 @@ img {
 }
 
 #schedule {
-	background: #fff;
+	background: #F7F8FA;
 	padding: 100px 0;
 }
 
@@ -136,8 +206,11 @@ img {
 }
 
 #course {
-	background: #F7F8FA;
 	padding: 100px 0;
+}
+
+#course p {
+	text-align: center;
 }
 
 #location {
@@ -157,23 +230,42 @@ img {
 	text-align: center;
 }
 
-#sponsors {
+#register .button-wrap {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+#partners {
 	padding: 100px 0;
 	text-align: center;
 }
 
-#sponsors p {
+#partners p {
 	margin-bottom: 50px;
 }
 
-.sponsor-list {
+#volunteer {
+	padding: 100px 0;
+	background: #F7F8FA;
+}
+
+#volunteer p {
+	text-align: center;
+}
+
+.partner-list {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin: 70px 0 40px;
 }
 
-.sponsor-list .sponsor {
+.partner-list::after {
+  content: "";
+  flex: 0 0 calc(50% - 30px);
+}
+
+.partner-list .partner {
 	width: calc(25% - 40px);
 	margin-bottom: 50px;
 	display: flex;
@@ -181,7 +273,11 @@ img {
 	align-items: center;
 }
 
-.sponsor-list .sponsor.title {
+.partner-list .partner img {
+	max-height: 90px;
+}
+
+.partner-list .partner.title {
 	width: calc(50% - 50px);
 }
 
@@ -203,41 +299,59 @@ footer a {
 }
 
 @media only screen and (max-width: 1200px) {
-	.sponsor-list .sponsor {
+	.partner-list .partner {
 		width: calc(25% - 40px);
 	}
 }
 
 @media only screen and (max-width: 905px) {
-	.sponsor-list .sponsor {
+	.partner-list .partner {
 		width: calc(25% - 30px);
 	}
 }
 
 @media only screen and (max-width: 800px) {
-	.sponsor-list .sponsor {
+	.partner-list .partner {
 		width: calc(50% - 50px);
 		margin-bottom: 60px;
 	}
-	.sponsor-list .sponsor.title {
+	.partner-list .partner.title {
 		width: 100%;	
 	}
-	.sponsor-list .sponsor.link {
+	.partner-list .partner.link {
 		width: 100%;	
+	}
+
+	#about .wrapper {
+		display: block;
+	}
+	#about .wrapper .image {
+		max-width: 300px;
+		margin: 0 auto 40px;
+		display: block;
+	}
+
+	#about .wrapper .copy h2 {
+		text-align: center;
 	}
 }
 
 @media only screen and (max-width: 600px) {
 	.menu-toggle {
 		display: block;
-		color: #fff;
+		color: #27A3B3;
 		padding: 20px 0;
 		font-weight: 800;
 		cursor: pointer;
 	}
+
+	header.scrolled .menu-toggle {
+		color: #fff;
+	}
+
 	nav {
 		display: none;
-		background: #114B5F;
+		background: #27A3B3;
 		width: 100%;
 		padding: 7px 0;
 	}
@@ -252,7 +366,7 @@ footer a {
 		color: #fff;
 		width: 100%;
 		display: block;
-		padding: 7px 0px;
+		padding: 12px 0px;
 	}
 
 	nav li a:hover {
@@ -260,7 +374,32 @@ footer a {
 	}
 
 	.hero {
-		padding: 70px 0 100px;
+		padding: 100px 0 80px;
+	}
+
+	#about, #schedule, #course, #register, #volunteer {
+		padding: 60px 0;
+	}
+
+	.hero .buttons {
+		/*display: flex;*/
+	}
+
+	.hero .buttons .button {
+		min-width: auto;
+		flex: 0 0 50%;
+	}
+
+	.hero .buttons .button:first-child {
+		margin-left: 0;
+	}
+
+	.hero .buttons .button:last-child {
+		margin-right: 0;
+	}
+
+	#about .wrapper .image {
+		max-width: 250px;
 	}
 
 	h1 {
@@ -272,10 +411,20 @@ footer a {
 	}
 
 	table {
-		font-size: 14px;
+		font-size: 12px;
 	}
 
 	th, td {
 		padding: 7px 3px;
+	}
+
+	p {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.hero .buttons .button {
+		padding: 18px 14px;
 	}
 }
