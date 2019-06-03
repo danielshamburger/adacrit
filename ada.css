@@ -92,9 +92,13 @@ h2 {
 }
 
 .hero p {
-	margin: 40px auto;
-	font-size: 20px;
+	margin: 30px auto 45px;
+	font-size: 17px;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
 	display: block;
+	font-weight: 700;
+	color: #27A3B3;
 }
 
 .button {
