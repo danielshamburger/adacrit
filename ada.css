@@ -1,17 +1,4 @@
-@import url('https://rsms.me/inter/inter-ui.css');
 html { font-family: 'Inter UI', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter UI var alt', sans-serif; }
-}
-
-
-/* ===============================================
-	CSS for Ada Crit Website
-
-	https://github.com/danielshamburger/adacrit/
-	info@adacrit.com
- =============================================== */
-
 
 header {
 	background: transparent;
@@ -259,7 +246,7 @@ img {
 
 .partner-list {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	margin: 70px 0 40px;
 }
@@ -270,15 +257,16 @@ img {
 }
 
 .partner-list .partner {
-	flex: 0 0 calc(25% - 40px);
+	flex: 0 0 calc(33% - 40px);
 	margin-bottom: 50px;
 	display: flex;
 	justify-content: center; 
 	align-items: center;
+	padding: 0 20px;
 }
 
 .partner-list .partner img {
-	max-height: 90px;
+	max-height: 115px;
 }
 
 .partner-list .partner.title {
@@ -300,18 +288,6 @@ footer p {
 footer a {
 	text-decoration: none;
 	color: #fff;
-}
-
-@media only screen and (max-width: 1200px) {
-	.partner-list .partner {
-		flex: 0 0 calc(25% - 40px);
-	}
-}
-
-@media only screen and (max-width: 905px) {
-	.partner-list .partner {
-		flex: 0 0 calc(25% - 30px);
-	}
 }
 
 @media only screen and (max-width: 800px) {
@@ -408,7 +384,7 @@ footer a {
 	}
 
 	.partner-list .partner {
-		flex: 0 0 calc(50% - 25px);
+		flex: 0 0 calc(50% - 40px);
 	}
 
 	h1 {
