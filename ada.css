@@ -244,6 +244,10 @@ img {
 	text-align: center;
 }
 
+#volunteer .button-wrap {
+	text-align: center;
+}
+
 .partner-list {
 	display: flex;
 	justify-content: flex-start;
